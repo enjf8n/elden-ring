@@ -926,3 +926,19 @@ h1 .gold-glow, h2 .gold-glow, h3 .gold-glow {
   body::after { background: radial-gradient(ellipse at center, transparent 60%, rgba(0, 0, 0, 0.35) 100%); }
   body::before { opacity: 0.02; }
 }
+
+/* ══════ REDUCED MOTION — respect OS/browser preference ══════ */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .custom-cursor { display: none !important; }
+  body.cursor-ready { cursor: auto; }
+  body::before { display: none; }
+  body::after { background: radial-gradient(ellipse at center, transparent 70%, rgba(0, 0, 0, 0.3) 100%); }
+  #three-canvas { display: none; }
+}
