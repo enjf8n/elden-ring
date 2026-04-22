@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elden Ring — Путешествие в Междуземье</title>
+  <meta name="description" content="Иммерсивное путешествие в мир Elden Ring: история создания, игровые механики, наследие FromSoftware и дополнение Shadow of the Erdtree." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Elden Ring — Путешествие в Междуземье" />
+  <meta property="og:description" content="Погрузись в мир Междуземья: тёмное фэнтези, созданное Хидэтакой Миядзаки и Джорджем Мартином." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;700;900&family=Marcellus&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Elden Ring — Путешествие в Междуземье",
+    "description": "Иммерсивное путешествие в мир Elden Ring: история создания, игровые механики, наследие FromSoftware.",
+    "author": { "@type": "Organization", "name": "Elden Ring Fan Tribute" },
+    "publisher": { "@type": "Organization", "name": "Elden Ring Fan Tribute" },
+    "datePublished": "2026-04-22"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Пролог", "item": "index.html" },
+      { "@type": "ListItem", "position": 2, "name": "Междуземье", "item": "world.html" },
+      { "@type": "ListItem", "position": 3, "name": "Бестиарий", "item": "bosses.html" },
+      { "@type": "ListItem", "position": 4, "name": "DLC", "item": "shadow.html" },
+      { "@type": "ListItem", "position": 5, "name": "Социум", "item": "community.html" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="page-transition" id="pageTransition"></div>
+  <canvas id="three-canvas"></canvas>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Elden Ring</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Меню">☰</button>
+      <nav class="nav" id="mainNav">
+        <a class="active" href="index.html">Пролог</a>
+        <a href="world.html">Междуземье</a>
+        <a href="bosses.html">Бестиарий</a>
+        <a href="shadow.html">DLC</a>
+        <a href="community.html">Социум</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ═══ HERO ═══ -->
+    <section class="hero section" id="hero">
+      <div class="hero-content" data-aos>
+        <span class="section-label">Пролог</span>
+        <h1>
+          Rise,<br />
+          <span class="gold-glow">Tarnished</span>
+        </h1>
+        <p class="hero-subtitle">
+          Миядзаки и Мартин. Открытый мир и souls-like боёвка.
+          Результат — одна из лучших игр в истории.
+        </p>
+        <a class="hero-cta" href="world.html">Войти в Междуземье ⚔</a>
+      </div>
+      <div class="hero-scroll-hint">Scroll</div>
+    </section>
+
+    <!-- ═══ THE COLLABORATION ═══ -->
+    <section class="section" id="collaboration">
+      <div class="container">
+        <span class="section-label" data-aos>Глава I</span>
+        <h2 data-aos>Союз Двух Гениев</h2>
+        <hr class="blood-divider" />
+        <div class="cards-grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-lg);">
+          <div data-aos>
+            <h3 style="color: var(--gold); margin-bottom: var(--space-sm);">Хидэтака Миядзаки</h3>
+            <p style="color: var(--text-dim); line-height: 1.9;">
+              Человек, который сделал сложность модной. Президент FromSoftware, автор Dark Souls,
+              Bloodborne и Sekiro. В Elden Ring он впервые выпустил своих демонов на просторы
+              открытого мира — и ничего не стало прежним.
+            </p>
+          </div>
+          <div data-aos>
+            <h3 style="color: var(--gold); margin-bottom: var(--space-sm);">Джордж Р. Р. Мартин</h3>
+            <p style="color: var(--text-dim); line-height: 1.9;">
+              Тот самый Мартин. Автор «Игры Престолов» написал мифологию Междуземья —
+              пантеон полубогов, их семейные разборки и войну, после которой
+              всё сломалось. Его почерк чувствуется в каждом описании предмета.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ GAMEPLAY PILLARS ═══ -->
+    <section class="section" id="gameplay">
+      <div class="container">
+        <span class="section-label" data-aos>Глава II</span>
+        <h2 data-aos>Столпы Геймплея</h2>
+        <hr class="blood-divider" />
+        <div class="cards-grid">
+          <article class="card glass-dark" data-aos>
+            <div class="card-icon">⚔️</div>
+            <h3>Тут тебя убьют</h3>
+            <p>Каждый враг может быть последним. Никаких поддавков — изучаешь паттерны, учишься на ошибках, побеждаешь. И это лучшее чувство в играх.</p>
+          </article>
+          <article class="card glass-dark" data-aos>
+            <div class="card-icon">🌍</div>
+            <h3>Мир без маркеров</h3>
+            <p>Хочешь — иди к боссу. Хочешь — исследуй пещеру на другом конце карты. Никто не ведёт за руку. Впервые у FromSoft — настоящий open world.</p>
+          </article>
+          <article class="card glass-dark" data-aos>
+            <div class="card-icon">👻</div>
+            <h3>Билды на любой вкус</h3>
+            <p>Маг крови, рыцарь-паладин, голый мужик с дубинкой — всё работает. Сотни видов оружия, заклинаний и Ash of War.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ LEGACY OF SOULS ═══ -->
+    <section class="section" id="legacy">
+      <div class="container">
+        <span class="section-label" data-aos>Глава III</span>
+        <h2 data-aos>Наследие Souls</h2>
+        <hr class="blood-divider" />
+        <p style="color: var(--text-dim); max-width: 700px; margin-bottom: var(--space-lg);" data-aos>
+          От Demon's Souls до Elden Ring. Каждая игра — шаг к идеалу.
+        </p>
+        <section class="splide" id="legacySlider" aria-label="Эволюция FromSoftware">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <article class="card glass-dark rune-border" style="height:100%;">
+                  <h3>Demon's Souls</h3>
+                  <p class="gold-glow" style="font-size:0.85rem; margin-bottom:8px;">2009</p>
+                  <p style="color:var(--text-dim);">Начало жанра. Революционная система сложности, мультиплеер через миры и атмосфера безысходности.</p>
+                </article>
+              </li>
+              <li class="splide__slide">
+                <article class="card glass-dark rune-border" style="height:100%;">
+                  <h3>Dark Souls</h3>
+                  <p class="gold-glow" style="font-size:0.85rem; margin-bottom:8px;">2011</p>
+                  <p style="color:var(--text-dim);">Связный открытый мир, культовые боссы, система humanity. Определил стандарт action-RPG на десятилетие.</p>
+                </article>
+              </li>
+              <li class="splide__slide">
+                <article class="card glass-dark rune-border" style="height:100%;">
+                  <h3>Bloodborne</h3>
+                  <p class="gold-glow" style="font-size:0.85rem; margin-bottom:8px;">2015</p>
+                  <p style="color:var(--text-dim);">Готический хоррор, агрессивная боевая система и сюжет, вдохновлённый Лавкрафтом.</p>
+                </article>
+              </li>
+              <li class="splide__slide">
+                <article class="card glass-dark rune-border" style="height:100%;">
+                  <h3>Sekiro</h3>
+                  <p class="gold-glow" style="font-size:0.85rem; margin-bottom:8px;">2019</p>
+                  <p style="color:var(--text-dim);">Япония эпохи Сэнгоку. Парирование как основа боя. Game of the Year 2019.</p>
+                </article>
+              </li>
+              <li class="splide__slide">
+                <article class="card glass-dark rune-border" style="height:100%;">
+                  <h3>Elden Ring</h3>
+                  <p class="gold-glow" style="font-size:0.85rem; margin-bottom:8px;">2022</p>
+                  <p style="color:var(--text-dim);">Вершина формулы. Открытый мир, 250+ часов контента, 23 миллиона копий за первый месяц.</p>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- ═══ THE SHATTERING ═══ -->
+    <section class="section" id="shattering">
+      <div class="container">
+        <span class="section-label" data-aos>Глава IV</span>
+        <h2 data-aos>Раскол</h2>
+        <hr class="blood-divider" />
+        <p style="color: var(--text-dim); max-width: 700px; margin-bottom: var(--space-lg);" data-aos>
+          Как мир Междуземья докатился до такого.
+        </p>
+        <div class="timeline">
+          <article class="timeline-item glass-dark" data-aos>
+            <span class="timeline-year">Эпоха Древа</span>
+            <h3>Правление Маарики</h3>
+            <p style="color:var(--text-dim);">Королева Маарика, Вечная, правит Междуземьем. Кольцо Элден хранит порядок мира под сенью Древа Эрд.</p>
+          </article>
+          <article class="timeline-item glass-dark" data-aos>
+            <span class="timeline-year">Ночь Чёрных Ножей</span>
+            <h3>Убийство Годвина</h3>
+            <p style="color:var(--text-dim);">Годвин Золотой, первенец Маарики, убит. Его тело живёт, но душа мертва. Начало Гниения, начало конца.</p>
+          </article>
+          <article class="timeline-item glass-dark" data-aos>
+            <span class="timeline-year">Раскол</span>
+            <h3>Война Полубогов</h3>
+            <p style="color:var(--text-dim);">Маарика разбивает Кольцо Элден. Осколки Великой Руны рассеяны между полубогами. Каждый жаждет абсолютной власти.</p>
+          </article>
+          <article class="timeline-item glass-dark" data-aos>
+            <span class="timeline-year">Пришествие</span>
+            <h3>Погасшие</h3>
+            <p style="color:var(--text-dim);">Лишённые благодати изгнанники возвращаются в Междуземье, ведомые призывом Перста. Их цель — собрать осколки и стать Повелителем Элдена.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SHADOW TEASER ═══ -->
+    <section class="section dlc-banner" id="shadowTeaser">
+      <div class="container">
+        <span class="section-label" data-aos>Эпилог</span>
+        <h2 data-aos>Shadow of the Erdtree</h2>
+        <p style="color: var(--text-dim); max-width: 600px; margin: 0 auto var(--space-md);" data-aos>
+          Самое большое DLC, что делал FromSoftware. Новые земли, боссы, которые заставят плакать, и история Микеллы.
+        </p>
+        <div data-aos>
+          <a class="hero-cta" href="shadow.html">Узнать подробности ✦</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <canvas id="erdtree-canvas"></canvas>
+    <div class="container" style="position: relative; z-index: 1;">
+      <div class="footer-subscribe" data-aos>
+        <h3 class="gold-glow">Стань Повелителем Элдена</h3>
+        <p style="color: var(--text-dim); margin-bottom: var(--space-sm); font-size: 0.9rem;">
+          Подпишись на обновления из Междуземья
+        </p>
+        <form class="subscribe-form" onsubmit="return false;">
+          <input type="email" placeholder="Твой email, Погасший..." />
+          <button type="submit">Подписаться</button>
+        </form>
+      </div>
+      <nav class="footer-links">
+        <a href="index.html">Пролог</a>
+        <a href="world.html">Междуземье</a>
+        <a href="bosses.html">Бестиарий</a>
+        <a href="shadow.html">DLC</a>
+        <a href="community.html">Социум</a>
+      </nav>
+      <p class="footer-copy">© 2026 Elden Ring Fan Tribute. Не является официальным продуктом Bandai Namco / FromSoftware.</p>
+    </div>
+  </footer>
+
+  <!-- Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
+  <!-- App -->
+  <script src="assets/js/three-scene.js" defer></script>
+  <script src="assets/js/erdtree.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

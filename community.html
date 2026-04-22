@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Социум — Сообщество Elden Ring</title>
+  <meta name="description" content="Фанатское творчество, мемы, отзывы и влияние Elden Ring на игровую индустрию." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;700;900&family=Marcellus&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="page-transition" id="pageTransition"></div>
+  <canvas id="three-canvas"></canvas>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Elden Ring</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Меню">☰</button>
+      <nav class="nav" id="mainNav">
+        <a href="index.html">Пролог</a>
+        <a href="world.html">Междуземье</a>
+        <a href="bosses.html">Бестиарий</a>
+        <a href="shadow.html">DLC</a>
+        <a class="active" href="community.html">Социум</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" style="min-height: 50vh;">
+      <div class="hero-content" data-aos>
+        <span class="section-label">Социум</span>
+        <h1>Голоса<br /><span class="gold-glow">Погасших</span></h1>
+        <p class="hero-subtitle">Как Elden Ring собрал одно из самых преданных сообществ в истории игр.</p>
+      </div>
+    </section>
+
+    <!-- Impact Stats -->
+    <section class="section">
+      <div class="container">
+        <div class="stats-row" data-aos>
+          <div class="stat-item">
+            <h3>25M+</h3>
+            <p>Копий продано</p>
+          </div>
+          <div class="stat-item">
+            <h3>300+</h3>
+            <p>Наград</p>
+          </div>
+          <div class="stat-item">
+            <h3>96</h3>
+            <p>Metacritic</p>
+          </div>
+          <div class="stat-item">
+            <h3>GOTY</h3>
+            <p>TGA 2022</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Carousel -->
+    <section class="section">
+      <div class="container">
+        <span class="section-label" data-aos>Отзывы</span>
+        <h2 data-aos>Слова Тех, Кто Прошёл</h2>
+        <hr class="blood-divider" />
+        <section class="splide" id="reviewsSlider" aria-label="Отзывы игроков" data-aos>
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <article class="review-card glass-dark rune-border">
+                  <p class="review-text">"300 часов — и я всё ещё нахожу новые подземелья. Это не игра, это второй дом."</p>
+                  <span class="review-author">— MidnightTarnished, Reddit</span>
+                </article>
+              </li>
+              <li class="splide__slide">
+                <article class="review-card glass-dark rune-border">
+                  <p class="review-text">"Малиния убила меня 147 раз. На 148-й я заплакал от счастья. Это и есть Elden Ring."</p>
+                  <span class="review-author">— LetMeSoloHer_Fan, Twitter</span>
+                </article>
+              </li>
+              <li class="splide__slide">
+                <article class="review-card glass-dark rune-border">
+                  <p class="review-text">"Первая игра, где я остановился и просто смотрел на закат в виртуальном мире 10 минут."</p>
+                  <span class="review-author">— AshOfWar22, Steam</span>
+                </article>
+              </li>
+              <li class="splide__slide">
+                <article class="review-card glass-dark rune-border">
+                  <p class="review-text">"Мой отец начал играть после того, как увидел, как я борюсь с Раданом. Теперь мы коопимся."</p>
+                  <span class="review-author">— GraceSummoner, YouTube</span>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- Memes Bento -->
+    <section class="section">
+      <div class="container">
+        <span class="section-label" data-aos>Культурный Феномен</span>
+        <h2 data-aos>Мемы и Фан-арт</h2>
+        <hr class="blood-divider" />
+        <p style="color: var(--text-dim); max-width: 700px; margin-bottom: var(--space-lg);" data-aos>
+          «Try finger, but hole» — фраза, которую понимает каждый, кто играл.
+        </p>
+        <div class="cards-grid">
+          <article class="card glass-dark" data-aos>
+            <div class="card-icon">💬</div>
+            <h3>Послания</h3>
+            <p>Ироничные, полезные, иногда трогательные — язык, понятный без перевода. Они делают мир живым.</p>
+          </article>
+          <article class="card glass-dark" data-aos>
+            <div class="card-icon">🎨</div>
+            <h3>Фан-арт</h3>
+            <p>Тысячи работ на ArtStation и Pixiv. Малиния, Ранни и Радан — самые рисуемые персонажи 2022–2024.</p>
+          </article>
+          <article class="card glass-dark" data-aos>
+            <div class="card-icon">🏆</div>
+            <h3>Let Me Solo Her</h3>
+            <p>Игрок, убивший Малинию тысячи раз, помогая другим. Bandai Namco подарили ему настоящий меч.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industry Impact -->
+    <section class="section">
+      <div class="container">
+        <span class="section-label" data-aos>Влияние</span>
+        <h2 data-aos>Как Elden Ring Изменил Индустрию</h2>
+        <hr class="blood-divider" />
+        <div class="timeline">
+          <article class="timeline-item glass-dark" data-aos>
+            <span class="timeline-year">Сложность</span>
+            <h3>25 млн копий</h3>
+            <p style="color:var(--text-dim);">Сложные игры могут быть массовыми. Elden Ring разрушил миф о нишевости Souls-like.</p>
+          </article>
+          <article class="timeline-item glass-dark" data-aos>
+            <span class="timeline-year">Open World</span>
+            <h3>Без маркеров и квестовых журналов</h3>
+            <p style="color:var(--text-dim);">Исследование ради исследования. Новая парадигма для жанра.</p>
+          </article>
+          <article class="timeline-item glass-dark" data-aos>
+            <span class="timeline-year">Нарратив</span>
+            <h3>Лор в описаниях предметов</h3>
+            <p style="color:var(--text-dim);">История рассказывается через архитектуру, предметы и контекст. Игрок — исследователь, не зритель.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <canvas id="erdtree-canvas"></canvas>
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="footer-subscribe" data-aos>
+        <h3 class="gold-glow">Стань Повелителем Элдена</h3>
+        <p style="color: var(--text-dim); margin-bottom: var(--space-sm); font-size: 0.9rem;">
+          Подпишись на обновления из Междуземья
+        </p>
+        <form class="subscribe-form" onsubmit="return false;">
+          <input type="email" placeholder="Твой email, Погасший..." />
+          <button type="submit">Подписаться</button>
+        </form>
+      </div>
+      <nav class="footer-links">
+        <a href="index.html">Пролог</a>
+        <a href="world.html">Междуземье</a>
+        <a href="bosses.html">Бестиарий</a>
+        <a href="shadow.html">DLC</a>
+        <a href="community.html">Социум</a>
+      </nav>
+      <p class="footer-copy">© 2026 Elden Ring Fan Tribute</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
+  <script src="assets/js/three-scene.js" defer></script>
+  <script src="assets/js/erdtree.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

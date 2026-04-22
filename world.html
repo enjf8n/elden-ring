@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Междуземье — Атлас мира Elden Ring</title>
+  <meta name="description" content="Интерактивная карта Междуземья: от Лимгрейва до Фарум-Азула. Исследуй каждый регион мира Elden Ring." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;700;900&family=Marcellus&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="page-transition" id="pageTransition"></div>
+  <canvas id="three-canvas"></canvas>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Elden Ring</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Меню">☰</button>
+      <nav class="nav" id="mainNav">
+        <a href="index.html">Пролог</a>
+        <a class="active" href="world.html">Междуземье</a>
+        <a href="bosses.html">Бестиарий</a>
+        <a href="shadow.html">DLC</a>
+        <a href="community.html">Социум</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" style="min-height: 60vh;">
+      <div class="hero-content" data-aos>
+        <span class="section-label">Атлас</span>
+        <h1>Междуземье</h1>
+        <p class="hero-subtitle">Нажми на регион, чтобы узнать его историю и тайны.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="map-container" data-aos>
+          <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" id="worldMap">
+            <!-- Лимгрейв -->
+            <polygon class="map-region" data-region="limgrave" points="180,350 280,320 320,380 300,440 220,430 160,400" />
+            <text class="map-label" x="240" y="385">Лимгрейв</text>
+            <!-- Лиурния -->
+            <polygon class="map-region" data-region="liurnia" points="200,200 300,180 340,250 300,310 220,320 170,280" />
+            <text class="map-label" x="260" y="260">Лиурния</text>
+            <!-- Каэлид -->
+            <polygon class="map-region" data-region="caelid" points="380,340 500,310 540,380 520,440 400,450 350,400" />
+            <text class="map-label" x="440" y="385">Каэлид</text>
+            <!-- Плато Альтус -->
+            <polygon class="map-region" data-region="altus" points="300,140 420,120 460,200 420,260 330,270 280,220" />
+            <text class="map-label" x="370" y="200">Альтус</text>
+            <!-- Замогилье -->
+            <polygon class="map-region" data-region="underground" points="220,440 320,450 340,520 280,550 200,530" />
+            <text class="map-label" x="270" y="495">Замогилье</text>
+            <!-- Вулкан -->
+            <polygon class="map-region" data-region="volcano" points="200,120 270,90 310,140 280,180 220,170" />
+            <text class="map-label" x="255" y="145">Вулкан</text>
+            <!-- Горные вершины -->
+            <polygon class="map-region" data-region="mountaintops" points="430,60 550,40 600,110 560,170 470,160 420,120" />
+            <text class="map-label" x="510" y="105">Горные вершины</text>
+            <!-- Фарум-Азула -->
+            <polygon class="map-region" data-region="farum" points="580,160 680,130 720,200 700,260 620,260 560,220" />
+            <text class="map-label" x="645" y="200">Фарум-Азула</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Region descriptions -->
+    <section class="section">
+      <div class="container">
+        <h2 data-aos>Регионы Междуземья</h2>
+        <hr class="blood-divider" />
+        <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr);">
+          <article class="card glass-dark" data-aos id="region-limgrave">
+            <h3>Лимгрейв</h3>
+            <p style="color:var(--text-dim);">Зелёные равнины, где начинается путь Погасшего. Здесь обитает Маргит — первое серьёзное испытание. Руины церквей хранят древние молитвы.</p>
+          </article>
+          <article class="card glass-dark" data-aos id="region-liurnia">
+            <h3>Лиурния Озёр</h3>
+            <p style="color:var(--text-dim);">Туманные озёра и Академия Райя Лукарии. Магический центр Междуземья, управляемый Ренналлой, Королевой Полной Луны.</p>
+          </article>
+          <article class="card glass-dark" data-aos id="region-caelid">
+            <h3>Каэлид</h3>
+            <p style="color:var(--text-dim);">Заражённая Алой Гнилью земля. Генерал Радан, страж звёзд, ведёт бесконечную войну с разложением в Эонии.</p>
+          </article>
+          <article class="card glass-dark" data-aos id="region-altus">
+            <h3>Плато Альтус</h3>
+            <p style="color:var(--text-dim);">Столица Лейнделл — золотой город у подножия Древа Эрд. Оплот последних защитников Кольца Элден.</p>
+          </article>
+          <article class="card glass-dark" data-aos id="region-underground">
+            <h3>Замогилье</h3>
+            <p style="color:var(--text-dim);">Подземные города с собственным небом из звёзд. Вечный Город, Нокрон и Нокстелла хранят тайны цивилизации до Древа.</p>
+          </article>
+          <article class="card glass-dark" data-aos id="region-volcano">
+            <h3>Вулкан Гельмир</h3>
+            <p style="color:var(--text-dim);">Усадьба Вулкано и Рикард, Повелитель Кощунства. Лава, змеи и тёмные ритуалы пожирания богов.</p>
+          </article>
+          <article class="card glass-dark" data-aos id="region-mountaintops">
+            <h3>Горные Вершины Гигантов</h3>
+            <p style="color:var(--text-dim);">Замёрзшие пустоши, где пал Огненный Гигант — последний из расы, уничтоженной Маарикой. Здесь горит Пламя Погребения.</p>
+          </article>
+          <article class="card glass-dark" data-aos id="region-farum">
+            <h3>Фарум-Азула</h3>
+            <p style="color:var(--text-dim);">Парящие руины вне времени. Здесь спит Драконий Повелитель Плацидусакс, ожидая бога, который уже не вернётся.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="mapModal">
+    <div class="modal glass-dark">
+      <button class="modal-close" id="modalClose">✕</button>
+      <h3 id="modalTitle" class="gold-glow" style="margin-bottom:var(--space-sm);"></h3>
+      <p id="modalText" style="color:var(--text-dim);"></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container" style="position:relative;z-index:1;">
+      <nav class="footer-links">
+        <a href="index.html">Пролог</a>
+        <a href="world.html">Междуземье</a>
+        <a href="bosses.html">Бестиарий</a>
+        <a href="shadow.html">DLC</a>
+        <a href="community.html">Социум</a>
+      </nav>
+      <p class="footer-copy">© 2026 Elden Ring Fan Tribute</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
+  <script src="assets/js/three-scene.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/map.js" defer></script>
+</body>
+</html>

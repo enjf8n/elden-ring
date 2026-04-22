@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Бестиарий — Боссы Elden Ring</title>
+  <meta name="description" content="Галерея ключевых боссов Elden Ring: их история, механики и арены. От Маргита до Радагона." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;700;900&family=Marcellus&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="page-transition" id="pageTransition"></div>
+  <canvas id="three-canvas"></canvas>
+  <div class="boss-bg-overlay" id="bossBg"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Elden Ring</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Меню">☰</button>
+      <nav class="nav" id="mainNav">
+        <a href="index.html">Пролог</a>
+        <a href="world.html">Междуземье</a>
+        <a class="active" href="bosses.html">Бестиарий</a>
+        <a href="shadow.html">DLC</a>
+        <a href="community.html">Социум</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" style="min-height: 50vh;">
+      <div class="hero-content" data-aos>
+        <span class="section-label">Бестиарий</span>
+        <h1>Боссы<br /><span class="gold-glow">Междуземья</span></h1>
+        <p class="hero-subtitle">Каждый — легенда. Каждый — кошмар. Наведись, чтобы увидеть их арену.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="boss-grid">
+          <article class="boss-card glass-dark rune-border" data-aos
+            data-boss-bg="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1920&q=60">
+            <img class="boss-card-img" src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&q=70" alt="Маргит, Ужасное Предзнаменование — страж врат Стормвиля" loading="lazy" />
+            <div class="boss-card-info">
+              <h3>Маргит</h3>
+              <span class="boss-title">Ужасное Предзнаменование</span>
+              <div class="boss-difficulty">◆ ◆ ◆ ◇ ◇</div>
+            </div>
+          </article>
+
+          <article class="boss-card glass-dark rune-border" data-aos
+            data-boss-bg="https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=1920&q=60">
+            <img class="boss-card-img" src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?w=600&q=70" alt="Годрик Привитый — хозяин замка Стормвиль, коллекционер рук" loading="lazy" />
+            <div class="boss-card-info">
+              <h3>Годрик Привитый</h3>
+              <span class="boss-title">Хозяин Стормвиля</span>
+              <div class="boss-difficulty">◆ ◆ ◆ ◇ ◇</div>
+            </div>
+          </article>
+
+          <article class="boss-card glass-dark rune-border" data-aos
+            data-boss-bg="https://images.unsplash.com/photo-1507400492013-162706c8c05e?w=1920&q=60">
+            <img class="boss-card-img" src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&q=70" alt="Ренналла, Королева Полной Луны — хранительница Академии" loading="lazy" />
+            <div class="boss-card-info">
+              <h3>Ренналла</h3>
+              <span class="boss-title">Королева Полной Луны</span>
+              <div class="boss-difficulty">◆ ◆ ◇ ◇ ◇</div>
+            </div>
+          </article>
+
+          <article class="boss-card glass-dark rune-border" data-aos
+            data-boss-bg="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=1920&q=60">
+            <img class="boss-card-img" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=70" alt="Радан, Бич Звёзд — генерал, остановивший небеса" loading="lazy" />
+            <div class="boss-card-info">
+              <h3>Радан</h3>
+              <span class="boss-title">Бич Звёзд</span>
+              <div class="boss-difficulty">◆ ◆ ◆ ◆ ◆</div>
+            </div>
+          </article>
+
+          <article class="boss-card glass-dark rune-border" data-aos
+            data-boss-bg="https://images.unsplash.com/photo-1533628635777-112b2239b1c7?w=1920&q=60">
+            <img class="boss-card-img" src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&q=70" alt="Моргот, Король Предзнаменований — последний защитник Лейнделла" loading="lazy" />
+            <div class="boss-card-info">
+              <h3>Моргот</h3>
+              <span class="boss-title">Король Предзнаменований</span>
+              <div class="boss-difficulty">◆ ◆ ◆ ◆ ◇</div>
+            </div>
+          </article>
+
+          <article class="boss-card glass-dark rune-border" data-aos
+            data-boss-bg="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=1920&q=60">
+            <img class="boss-card-img" src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=600&q=70" alt="Малиния, Клинок Микеллы — непобедимая богиня Гнили" loading="lazy" />
+            <div class="boss-card-info">
+              <h3>Малиния</h3>
+              <span class="boss-title">Клинок Микеллы</span>
+              <div class="boss-difficulty">◆ ◆ ◆ ◆ ◆</div>
+            </div>
+          </article>
+
+          <article class="boss-card glass-dark rune-border" data-aos
+            data-boss-bg="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?w=1920&q=60">
+            <img class="boss-card-img" src="https://images.unsplash.com/photo-1464802686167-b939a6910659?w=600&q=70" alt="Малкет, Чёрный Клинок — воин, убивший Годвина" loading="lazy" />
+            <div class="boss-card-info">
+              <h3>Малкет</h3>
+              <span class="boss-title">Чёрный Клинок</span>
+              <div class="boss-difficulty">◆ ◆ ◆ ◆ ◆</div>
+            </div>
+          </article>
+
+          <article class="boss-card glass-dark rune-border" data-aos
+            data-boss-bg="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=1920&q=60">
+            <img class="boss-card-img" src="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?w=600&q=70" alt="Радагон — другая сторона Маарики, финальный противник" loading="lazy" />
+            <div class="boss-card-info">
+              <h3>Радагон / Элден Зверь</h3>
+              <span class="boss-title">Золотой Орден</span>
+              <div class="boss-difficulty">◆ ◆ ◆ ◆ ◆</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container" style="position:relative;z-index:1;">
+      <nav class="footer-links">
+        <a href="index.html">Пролог</a>
+        <a href="world.html">Междуземье</a>
+        <a href="bosses.html">Бестиарий</a>
+        <a href="shadow.html">DLC</a>
+        <a href="community.html">Социум</a>
+      </nav>
+      <p class="footer-copy">© 2026 Elden Ring Fan Tribute</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
+  <script src="assets/js/three-scene.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/bosses.js" defer></script>
+</body>
+</html>

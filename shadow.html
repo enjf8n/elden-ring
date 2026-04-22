@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shadow of the Erdtree — DLC Elden Ring</title>
+  <meta name="description" content="Подробный обзор дополнения Shadow of the Erdtree: новые земли, боссы, механики и история Микеллы." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;700;900&family=Marcellus&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="page-transition" id="pageTransition"></div>
+  <canvas id="three-canvas"></canvas>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Elden Ring</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Меню">☰</button>
+      <nav class="nav" id="mainNav">
+        <a href="index.html">Пролог</a>
+        <a href="world.html">Междуземье</a>
+        <a href="bosses.html">Бестиарий</a>
+        <a class="active" href="shadow.html">DLC</a>
+        <a href="community.html">Социум</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="hero-content" data-aos>
+        <span class="section-label">DLC</span>
+        <h1>Shadow of the<br /><span class="gold-glow">Erdtree</span></h1>
+        <p class="hero-subtitle">
+          Самое большое DLC FromSoftware. Земля Теней — мир по ту сторону Междуземья,
+          где всё ещё страшнее и красивее.
+        </p>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section">
+      <div class="container">
+        <div class="stats-row" data-aos>
+          <div class="stat-item">
+            <h3>10+</h3>
+            <p>Новых боссов</p>
+          </div>
+          <div class="stat-item">
+            <h3>100+</h3>
+            <p>Часов контента</p>
+          </div>
+          <div class="stat-item">
+            <h3>8</h3>
+            <p>Новых регионов</p>
+          </div>
+          <div class="stat-item">
+            <h3>97</h3>
+            <p>Metacritic</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <span class="section-label" data-aos>Новая Глава</span>
+        <h2 data-aos>Земля Теней</h2>
+        <hr class="blood-divider" />
+        <div class="cards-grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-lg);">
+          <div data-aos>
+            <h3 style="color: var(--gold); margin-bottom: var(--space-sm);">Куда делся Микелла</h3>
+            <p style="color: var(--text-dim); line-height: 1.9;">
+              Брат Малинии решил, что Древо Эрд — зло. Ушёл в Земли Теней
+              строить свой новый порядок. Но его план пошёл не так.
+              Совсем не так.
+            </p>
+          </div>
+          <div data-aos>
+            <h3 style="color: var(--gold); margin-bottom: var(--space-sm);">Что нового</h3>
+            <p style="color: var(--text-dim); line-height: 1.9;">
+              Scadutree Blessing — отдельная система прокачки, работающая только в DLC.
+              Новое оружие, новые заклинания, переработанный призыв духов.
+              И боссы. Боссы тут — другой уровень.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <span class="section-label" data-aos>Отзывы</span>
+        <h2 data-aos>Что говорят критики</h2>
+        <hr class="blood-divider" />
+        <div class="cards-grid">
+          <article class="card glass-dark rune-border" data-aos>
+            <p class="review-text">"Лучшее DLC в истории видеоигр. Без шуток."</p>
+            <span class="review-author">— IGN, 10/10</span>
+          </article>
+          <article class="card glass-dark rune-border" data-aos>
+            <p class="review-text">"Это не DLC — это полноценная игра, запакованная внутрь другой игры."</p>
+            <span class="review-author">— GameSpot, 10/10</span>
+          </article>
+          <article class="card glass-dark rune-border" data-aos>
+            <p class="review-text">"Миядзаки опять это сделал."</p>
+            <span class="review-author">— Eurogamer, Essential</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dlc-banner">
+      <div class="container" data-aos>
+        <h2>Доступно сейчас</h2>
+        <p style="color: var(--text-dim); max-width: 500px; margin: var(--space-sm) auto var(--space-lg);">
+          Ты знаешь, что хочешь туда.
+        </p>
+        <a class="hero-cta" href="https://store.steampowered.com" target="_blank" rel="noopener">Приобрести в Steam ✦</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container" style="position:relative;z-index:1;">
+      <nav class="footer-links">
+        <a href="index.html">Пролог</a>
+        <a href="world.html">Междуземье</a>
+        <a href="bosses.html">Бестиарий</a>
+        <a href="shadow.html">DLC</a>
+        <a href="community.html">Социум</a>
+      </nav>
+      <p class="footer-copy">© 2026 Elden Ring Fan Tribute</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
+  <script src="assets/js/three-scene.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
