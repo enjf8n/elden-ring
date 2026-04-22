@@ -32,8 +32,11 @@
   --space-2xl: 100px;
   --z-bg: -1;
   --z-content: 1;
-  --z-header: 50;
-  --z-modal: 100;
+  --z-overlay-noise: 1;
+  --z-overlay-vignette: 2;
+  --z-header: 9995;
+  --z-modal: 9996;
+  --z-page-transition: 9998;
   --z-cursor: 9999;
   --glow-gold: 0 0 20px rgba(212, 175, 55, 0.3), 0 0 60px rgba(212, 175, 55, 0.1);
   --glow-blood: 0 0 20px rgba(139, 0, 0, 0.4), 0 0 40px rgba(139, 0, 0, 0.15);
@@ -63,18 +66,20 @@ body {
   background-image: radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, 0.03) 0%, transparent 60%);
   line-height: 1.7;
   overflow-x: hidden;
-  cursor: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Vignette overlay — cinematic depth */
+/* Hide native cursor only once the custom cursor is armed by JS */
+body.cursor-ready { cursor: none; }
+
+/* Vignette overlay — cinematic depth (sits under header so it doesn't darken nav) */
 body::after {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 9990;
+  z-index: var(--z-overlay-vignette);
   background: radial-gradient(ellipse at center, transparent 50%, rgba(0, 0, 0, 0.5) 100%);
 }
 
@@ -84,7 +89,7 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 9989;
+  z-index: var(--z-overlay-noise);
   opacity: 0.035;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-repeat: repeat;
@@ -92,7 +97,7 @@ body::before {
 }
 
 @media (pointer: coarse) {
-  body { cursor: auto; }
+  body.cursor-ready { cursor: auto; }
 }
 
 ::-webkit-scrollbar { width: 6px; }
@@ -802,7 +807,7 @@ h1 .gold-glow, h2 .gold-glow, h3 .gold-glow {
 .page-transition {
   position: fixed;
   inset: 0;
-  z-index: 9998;
+  z-index: var(--z-page-transition);
   background: var(--bg-abyss);
   transform: scaleY(0);
   transform-origin: bottom;
