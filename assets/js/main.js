@@ -6,10 +6,13 @@
 (function () {
   "use strict";
 
+  /* Respect the user's reduced-motion preference */
+  const prefersReducedMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   /* ═══ CURSOR — GSAP quickSetter for 120 FPS ═══ */
   function initCursor() {
     const cursor = document.getElementById("cursor");
-    if (!cursor || matchMedia("(pointer: coarse)").matches) return;
+    if (!cursor || matchMedia("(pointer: coarse)").matches || prefersReducedMotion) return;
 
     /* Use GSAP quickSetter for sub-frame positioning */
     if (typeof gsap === "undefined") return;
@@ -61,16 +64,25 @@
     const toggle = document.getElementById("navToggle");
     const nav = document.getElementById("mainNav");
     if (!toggle || !nav) return;
-    toggle.addEventListener("click", () => nav.classList.toggle("is-open"));
+
+    /* Wire accessible attributes defensively — works even without markup updates */
+    if (!toggle.hasAttribute("aria-controls")) toggle.setAttribute("aria-controls", nav.id || "mainNav");
+    if (!toggle.hasAttribute("aria-expanded")) toggle.setAttribute("aria-expanded", "false");
+
+    const sync = (open) => {
+      nav.classList.toggle("is-open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+    toggle.addEventListener("click", () => sync(!nav.classList.contains("is-open")));
     /* Close on link click */
     nav.querySelectorAll("a").forEach((a) =>
-      a.addEventListener("click", () => nav.classList.remove("is-open"))
+      a.addEventListener("click", () => sync(false))
     );
   }
 
   /* ═══ LENIS SMOOTH SCROLL ═══ */
   function initLenis() {
-    if (typeof Lenis === "undefined") return null;
+    if (typeof Lenis === "undefined" || prefersReducedMotion) return null;
     try {
       const lenis = new Lenis({
         duration: 1.2,
@@ -100,6 +112,12 @@
     if (hasST) gsap.registerPlugin(ScrollTrigger);
 
     const allAos = document.querySelectorAll("[data-aos]");
+
+    /* Reduced motion: just show content instantly, no scroll-triggered fades/parallax */
+    if (prefersReducedMotion) {
+      allAos.forEach((el) => gsap.set(el, { opacity: 1, y: 0, clearProps: "transform" }));
+      return;
+    }
 
     allAos.forEach((el) => {
       const inHero = el.closest(".hero");
@@ -155,7 +173,7 @@
   /* ═══ PAGE TRANSITIONS ═══ */
   function initPageTransitions() {
     const overlay = document.getElementById("pageTransition");
-    if (!overlay) return;
+    if (!overlay || prefersReducedMotion) return;
 
     document.addEventListener("click", (e) => {
       const link = e.target.closest("a[href]");
